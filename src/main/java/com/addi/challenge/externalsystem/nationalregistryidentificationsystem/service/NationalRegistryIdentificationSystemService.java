@@ -12,4 +12,7 @@ public interface NationalRegistryIdentificationSystemService {
     Person save(Person person);
 
     void deleteById(Long personId);
+
+    Person findByNationalIdentificationNumber(String nationalIdentificationNumber);
+
 }

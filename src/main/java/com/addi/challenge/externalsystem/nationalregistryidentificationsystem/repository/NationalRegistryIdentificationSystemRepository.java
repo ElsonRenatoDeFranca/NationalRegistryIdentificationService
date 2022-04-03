@@ -4,4 +4,7 @@ import com.addi.challenge.externalsystem.nationalregistryidentificationsystem.en
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface NationalRegistryIdentificationSystemRepository extends JpaRepository<Person, Long> {
+    //Person findByLastname(String lastname);
+    Person findByNationalIdentificationNumber(String nationalIdentificationNumber);
+    //List<Person> findByEmailAddressAndLastname(EmailAddress emailAddress, String lastname);
 }

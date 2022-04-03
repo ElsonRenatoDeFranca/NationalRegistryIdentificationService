@@ -9,7 +9,7 @@ import javax.persistence.Id;
 
 @Entity
 @Getter
-@EqualsAndHashCode(exclude = {"name"})
+@EqualsAndHashCode(exclude = {"id"})
 @AllArgsConstructor
 @RequiredArgsConstructor
 @Builder

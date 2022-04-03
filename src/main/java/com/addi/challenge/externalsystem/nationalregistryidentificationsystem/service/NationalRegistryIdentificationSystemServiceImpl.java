@@ -34,6 +34,12 @@ public class NationalRegistryIdentificationSystemServiceImpl implements National
     }
 
     @Override
+    public Person findByNationalIdentificationNumber(String nationalIdentificationNumber) {
+        return repository.findByNationalIdentificationNumber(nationalIdentificationNumber);
+    }
+
+
+    @Override
     public Person save(Person person) {
         return repository.save(person);
     }
