@@ -30,13 +30,6 @@ public class NationalRegistryIdentificationSystemController {
         return new ResponseEntity<>(savedPerson, HttpStatus.CREATED);
     }
 
-    /*@GetMapping("/{id}")
-    @ResponseBody
-    public ResponseEntity<Person> findById(@PathVariable("id") Long id) {
-        Person person = nationalRegistryIdentificationSystemService.findById(id);
-        return new ResponseEntity<>(person, HttpStatus.OK);
-    }*/
-
     @GetMapping("/{nationalIdentificationNumber}")
     @ResponseBody
     public ResponseEntity<Person> findByNationalIdentificationNumber(@PathVariable("nationalIdentificationNumber") String nationalIdentificationNumber) {

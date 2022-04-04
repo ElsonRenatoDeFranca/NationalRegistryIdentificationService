@@ -24,20 +24,9 @@ public class NationalRegistryIdentificationSystemServiceImpl implements National
     }
 
     @Override
-    public Person findById(Long personId) {
-        try {
-            return repository.findById(personId).orElseThrow(() -> new PersonNotFoundException(PERSON_NOT_FOUND_EXCEPTION));
-        } catch (PersonNotFoundException e) {
-            e.printStackTrace();
-            return null;
-        }
-    }
-
-    @Override
     public Person findByNationalIdentificationNumber(String nationalIdentificationNumber) {
         return repository.findByNationalIdentificationNumber(nationalIdentificationNumber);
     }
-
 
     @Override
     public Person save(Person person) {
