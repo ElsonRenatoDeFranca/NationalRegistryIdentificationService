@@ -2,9 +2,9 @@ package com.addi.challenge.externalsystem.nationalregistryidentificationsystem.r
 
 import com.addi.challenge.externalsystem.nationalregistryidentificationsystem.entity.Person;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface NationalRegistryIdentificationSystemRepository extends JpaRepository<Person, Long> {
-    //Person findByLastname(String lastname);
     Person findByNationalIdentificationNumber(String nationalIdentificationNumber);
-    //List<Person> findByEmailAddressAndLastname(EmailAddress emailAddress, String lastname);
 }

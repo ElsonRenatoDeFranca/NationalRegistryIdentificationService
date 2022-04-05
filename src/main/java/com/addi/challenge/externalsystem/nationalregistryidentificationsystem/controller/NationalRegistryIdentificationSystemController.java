@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/people")
+@RequestMapping("/api/nationalregistry")
 public class NationalRegistryIdentificationSystemController {
 
     private final NationalRegistryIdentificationSystemService nationalRegistryIdentificationSystemService;
