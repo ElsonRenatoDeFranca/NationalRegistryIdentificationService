@@ -34,7 +34,7 @@ public class NationalRegistryIdentificationSystemServiceImpl implements National
     }
 
     @Override
-    public void deleteById(Long personId) {
-        repository.deleteById(personId);
+    public void deleteByNationalIdentificationNumber(String nationalIdentificationNumber) {
+        repository.deleteByNationalIdentificationNumber(nationalIdentificationNumber);
     }
 }

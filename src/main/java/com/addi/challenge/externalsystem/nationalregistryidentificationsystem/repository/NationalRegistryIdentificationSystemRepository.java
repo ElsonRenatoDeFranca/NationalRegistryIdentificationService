@@ -7,4 +7,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface NationalRegistryIdentificationSystemRepository extends JpaRepository<Person, Long> {
     Person findByNationalIdentificationNumber(String nationalIdentificationNumber);
+    void deleteByNationalIdentificationNumber(String nationalIdentificationNumber);
 }

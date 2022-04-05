@@ -9,7 +9,7 @@ public interface NationalRegistryIdentificationSystemService {
 
     Person save(Person person);
 
-    void deleteById(Long personId);
+    void deleteByNationalIdentificationNumber(String nationalIdentificationNumber);
 
     Person findByNationalIdentificationNumber(String nationalIdentificationNumber);
 

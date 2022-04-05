@@ -37,9 +37,8 @@ public class NationalRegistryIdentificationSystemController {
         return new ResponseEntity<>(person, HttpStatus.OK);
     }
 
-
-    @DeleteMapping("/{id}")
-    void deleteById(@PathVariable Long id) {
-        nationalRegistryIdentificationSystemService.deleteById(id);
+    @DeleteMapping("/{nationalIdentificationNumber}")
+    void deleteByNationalIdentificationNumber(@PathVariable String nationalIdentificationNumber) {
+        nationalRegistryIdentificationSystemService.deleteByNationalIdentificationNumber(nationalIdentificationNumber);
     }
 }
