@@ -42,7 +42,7 @@ public class NationalRegistryIdentificationSystemController {
     }
 
     @PostMapping
-    @Operation(summary = "This method is to save a specific person to CRM")
+    @Operation(summary = "This method is to save a specific person to National Registry")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "201",
                     description = "Saved a person to National Registry",
@@ -70,7 +70,7 @@ public class NationalRegistryIdentificationSystemController {
 
     @GetMapping("/{nationalIdentificationNumber}")
     @ResponseBody
-    @Operation(summary = "This is to fetch a specific person stored in CRM by using its national ID number as key")
+    @Operation(summary = "This is to fetch a specific person stored in National Registry by using its national ID number as key")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200",
                     description = "Fetched a person from National Registry",
@@ -88,13 +88,13 @@ public class NationalRegistryIdentificationSystemController {
     }
 
     @DeleteMapping("/{nationalIdentificationNumber}")
-    @Operation(summary = "This operation is to delete a specific person stored in CRM by using its national ID number as key")
+    @Operation(summary = "This operation is to delete a specific person stored in National Registry by using its national ID number as key")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200",
-                    description = "Fetched a person from CRM",
+                    description = "Fetched a person from National Registry",
                     content = {@Content(mediaType = "application/json")}),
             @ApiResponse(responseCode = "404",
-                    description = "The person was not found at CRM",
+                    description = "The person was not found at National Registry",
                     content = {@Content(mediaType = "application/json")}),
             @ApiResponse(responseCode = "503",
                     description = "The service is not available",
