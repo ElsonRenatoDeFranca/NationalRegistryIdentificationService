@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.addi.challenge.externalsystem</groupId>
-	<artifactId>NationalRegistryIdentificationService</artifactId>
+	<artifactId>NationalRegistryIdentificationSystem</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>NationalRegistryIdentificationService</name>
-	<description>National Registry Identification Service</description>
+	<name>NationalRegistryIdentificationSystem</name>
+	<description>National Registry Identification System</description>
 	<properties>
 		<java.version>1.8</java.version>
 		<testcontainers.version>1.16.2</testcontainers.version>

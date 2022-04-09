@@ -1,6 +1,9 @@
 package com.addi.challenge.externalsystem.nationalregistryidentificationsystem.service;
 
 import com.addi.challenge.externalsystem.nationalregistryidentificationsystem.entity.Person;
+import com.addi.challenge.externalsystem.nationalregistryidentificationsystem.exception.PersonMismatchException;
+import com.addi.challenge.externalsystem.nationalregistryidentificationsystem.exception.PersonNotFoundException;
+import com.addi.challenge.externalsystem.nationalregistryidentificationsystem.exception.PersonNotProvidedException;
 import com.addi.challenge.externalsystem.nationalregistryidentificationsystem.repository.NationalRegistryIdentificationSystemRepository;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -56,10 +59,11 @@ class NationalRegistryIdentificationSystemServiceImplTest {
     }
 
     @Test
-    public void shouldDeleteAnExistingPersonFromTheDatabaseWhenDeleteByIdIsCalled() {
+    public void shouldDeleteAnExistingPersonFromTheDatabaseWhenDeleteByIdIsCalled() throws PersonNotFoundException {
         Person expectedPerson = createPersonMock();
 
         doNothing().when(repository).deleteByNationalIdentificationNumber(any());
+        when(repository.findByNationalIdentificationNumber(any())).thenReturn(expectedPerson);
 
         this.nationalRegistryIdentificationSystemService.deleteByNationalIdentificationNumber(expectedPerson.getNationalIdentificationNumber());
 
@@ -69,7 +73,7 @@ class NationalRegistryIdentificationSystemServiceImplTest {
 
 
     @Test
-    public void shouldAddANewPersonToTheDatabaseWhenSaveIsCalled() {
+    public void shouldAddANewPersonToTheDatabaseWhenSaveIsCalled() throws PersonNotProvidedException, PersonMismatchException {
         Person expectedPerson = createPersonMock();
 
         when(repository.save(any())).thenReturn(expectedPerson);
