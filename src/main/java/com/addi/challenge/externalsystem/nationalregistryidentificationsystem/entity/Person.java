@@ -1,6 +1,7 @@
 package com.addi.challenge.externalsystem.nationalregistryidentificationsystem.entity;
 
 import lombok.*;
+import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -15,7 +16,8 @@ import javax.persistence.Id;
 @Builder
 public class Person {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(generator = "increment")
+    @GenericGenerator(name = "increment", strategy = "increment")
     private Long id;
     private String firstName;
     private String lastName;

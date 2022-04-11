@@ -1,2 +1,6 @@
-server:
-  port: 8092
+spring:
+  jpa:
+    show-sql: true
+    generate-ddl: true
+  datasource:
+    url: ${JDBC_DATASOURCE_URL}
