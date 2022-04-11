@@ -1,7 +1,7 @@
 # National Registry
 
 This is the API responsible for simulating the CRM operations. It is a cloud native api and is currently deployed on Heroku. The complete documentation was defined according to Open API documentation:
-https://aw-national-registry-api.herokuapp.com/swagger-ui/index.html
+https://aw-national-registry-api.herokuapp.com/swagger-ui/index.html 
 
 # National Registry deployment process to Heroku
 
